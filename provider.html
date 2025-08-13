@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Provider Detail</title>
+  <link rel="stylesheet" href="CSS/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">FixFast</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="providerDetail"></section>
+    <section>
+      <h2>Request Booking</h2>
+      <form id="bookingForm">
+        <input type="text" name="name" placeholder="Your name" required />
+        <input type="tel" name="phone" placeholder="Phone" required />
+        <textarea name="note" placeholder="Job details" rows="3"></textarea>
+        <button type="submit">Send Request</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© 2025 FixFast</small>
+    </div>
+  </footer>
+
+  <script src="mockData.js"></script>
+  <script src="provider.js"></script>
+</body>
+</html>
