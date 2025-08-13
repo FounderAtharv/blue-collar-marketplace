@@ -53,3 +53,16 @@ a.card:hover h3{ text-decoration:underline; }  /* optional hover */
   margin-top: var(--space);
 }
 .detail-card .pad{ padding: var(--space); }
+
+/* Styling Form when you click on Cards*/
+.form{ display:grid; gap:12px; max-width:640px; }
+.input{
+  width:100%; padding:12px 14px; border:1px solid #e5e7eb;
+  border-radius:12px; font:inherit; background:#fff;
+}
+.input:focus{ outline:none; border-color:#c7d2fe; box-shadow:0 0 0 4px #eef2ff; }
+.btn{
+  padding:12px 16px; border:0; border-radius:12px; font-weight:700;
+  background:var(--accent); color:#fff; cursor:pointer;
+}
+.btn:disabled{ opacity:.6; cursor:not-allowed; }
