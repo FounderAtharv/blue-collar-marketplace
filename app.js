@@ -70,3 +70,18 @@ function initUI(){
 }
 
 document.addEventListener("DOMContentLoaded", initUI);
+
+
+
+// Provider details and linking cards to details
+function cardTemplate(p){
+  return `
+  <a class="card" href="provider.html?id=${p.id}">
+    <img src="${p.photo}" alt="${p.name}" loading="lazy"/>
+    <div class="pad">
+      <h3>${p.name}</h3>
+      <div class="meta">${p.categories.join(", ")} • ${p.city}</div>
+      <div class="price">${p.price}</div>
+    </div>
+  </a>`;
+}
