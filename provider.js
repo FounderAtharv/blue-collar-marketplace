@@ -27,3 +27,10 @@ document.getElementById('bookingForm').addEventListener('submit', (e) => {
   alert("Booking request sent! (mock)");
   e.target.reset();
 });
+
+
+if (provider) {
+  document.getElementById('heroImg').src = provider.photo;
+  document.getElementById('heroImg').alt = provider.name;
+  // rest of your render stays same (name, meta, bio, price) into #providerDetail
+}
