@@ -30,3 +30,26 @@ body{margin:0;background:var(--bg);color:var(--text);line-height:1.35}
 /* Links inside cards */
 a.card{ text-decoration:none; color:inherit; display:block; }
 a.card:hover h3{ text-decoration:underline; }  /* optional hover */
+
+/* Styling Provider.html cards */
+.hero{
+  border-radius: var(--radius);
+  overflow:hidden;
+  box-shadow: var(--shadow);
+  background:#e5e7eb;
+  margin-top: var(--space);
+}
+.hero img{
+  width:100%;
+  max-height:420px;      /* adjust 360–480 if you like */
+  object-fit:cover;
+  display:block;
+}
+.detail-card{
+  background:var(--card);
+  border:1px solid #e5e7eb;
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  margin-top: var(--space);
+}
+.detail-card .pad{ padding: var(--space); }
