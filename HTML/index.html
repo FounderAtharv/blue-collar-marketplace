@@ -1,12 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Workr</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Home Services Near You</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<link rel="stylesheet" href="style.css">
 <body>
-   
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="/">FixFast</a>
+      <form id="searchForm" class="search">
+        <input id="q" type="search" placeholder="Search (e.g., plumber, electrician)" aria-label="Search services"/>
+        <input id="city" type="text" placeholder="City" aria-label="City"/>
+        <button type="submit">Search</button>
+      </form>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="filters">
+      <button data-cat="all" class="chip chip--active">All</button>
+      <button data-cat="Plumber" class="chip">Plumber</button>
+      <button data-cat="Electrician" class="chip">Electrician</button>
+      <button data-cat="Carpenter" class="chip">Carpenter</button>
+      <button data-cat="Cleaner" class="chip">Cleaner</button>
+    </section>
+
+    <section aria-live="polite" aria-busy="false">
+      <div id="results" class="card-grid"></div>
+      <p id="empty" class="empty" hidden>No results. Try a different search.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© 2025 FixFast • Made locally</small>
+    </div>
+  </footer>
+
+  <script src="mockData.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
