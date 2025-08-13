@@ -26,3 +26,7 @@ body{margin:0;background:var(--bg);color:var(--text);line-height:1.35}
 .empty{color:var(--muted);padding:var(--space);text-align:center}
 .site-footer{border-top:1px solid #e5e7eb;margin-top:var(--space-lg);padding:var(--space)}
 @media (max-width:640px){ .search{flex-wrap:wrap} }
+
+/* Links inside cards */
+a.card{ text-decoration:none; color:inherit; display:block; }
+a.card:hover h3{ text-decoration:underline; }  /* optional hover */
