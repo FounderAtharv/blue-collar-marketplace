@@ -14,22 +14,30 @@
   </header>
 
   <main class="container">
-    <section id="providerDetail"></section>
-    <section>
-      <h2>Request Booking</h2>
-      <form id="bookingForm">
-        <input type="text" name="name" placeholder="Your name" required />
-        <input type="tel" name="phone" placeholder="Phone" required />
-        <textarea name="note" placeholder="Job details" rows="3"></textarea>
-        <button type="submit">Send Request</button>
-      </form>
-    </section>
-  </main>
-  
-<main class="container">
+  <!-- ONE hero image only -->
   <section class="hero">
     <img id="heroImg" alt="">
   </section>
+
+  <!-- Two-column area: LEFT = form, RIGHT = provider info -->
+  <section class="detail-grid">
+    <article class="detail-card">
+      <div class="pad">
+        <h2>Request Booking</h2>
+        <form id="bookingForm" class="form">
+          <input class="input" type="text" name="name" placeholder="Your name" required />
+          <input class="input" type="tel" name="phone" placeholder="Phone" required />
+          <textarea class="input" name="note" placeholder="Job details" rows="4"></textarea>
+          <button class="btn" type="submit">Send Request</button>
+        </form>
+      </div>
+    </article>
+
+    <article class="detail-card">
+      <div class="pad" id="providerInfo"></div>
+    </article>
+  </section>
+</main>
 
   <article class="detail-card">
     <div class="pad" id="providerDetail"></div>
