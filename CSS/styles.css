@@ -66,3 +66,14 @@ a.card:hover h3{ text-decoration:underline; }  /* optional hover */
   background:var(--accent); color:#fff; cursor:pointer;
 }
 .btn:disabled{ opacity:.6; cursor:not-allowed; }
+
+/* Two-column layout on provider page */
+.detail-grid{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space);
+  margin-top: var(--space);
+}
+@media (max-width: 900px){
+  .detail-grid{ grid-template-columns: 1fr; }
+}
