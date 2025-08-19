@@ -1,6 +1,18 @@
 const $ = (sel, root=document) => root.querySelector(sel);
 const $$ = (sel, root=document) => [...root.querySelectorAll(sel)];
 
+const PLACEHOLDER =
+  `data:image/svg+xml;utf8,${encodeURIComponent(`
+    <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 180'>
+      <rect width='240' height='180' fill='#eef2ff'/>
+      <g fill='none' stroke='#c7d2fe' stroke-width='6'>
+        <rect x='30' y='30' width='180' height='120' rx='12' ry='12'/>
+        <path d='M55 130 L110 80 L150 110 L185 85'/>
+        <circle cx='95' cy='65' r='10' fill='#c7d2fe' stroke='none'/>
+      </g>
+    </svg>
+  `)}`;
+
 const state = {
   data: window.MOCK_PROVIDERS,
   q: "",
@@ -26,14 +38,17 @@ function filterData(){
 
 function cardTemplate(p){
   return `
-  <article class="card" data-id="${p.id}">
-    <img src="${p.photo}" alt="${p.name}" loading="lazy"/>
-    <div class="pad">
-      <h3>${p.name}</h3>
-      <div class="meta">${p.categories.join(", ")} • ${p.city}</div>
-      <div class="price">${p.price}</div>
-    </div>
-  </article>`;
+    <a class="card" href="provider.html?id=${p.id}">
+      <img src="${p.photo}"
+           alt="${p.name}"
+           loading="lazy"
+           onerror="this.onerror=null; this.src='${PLACEHOLDER}';"/>
+      <div class="pad">
+        <h3>${p.name}</h3>
+        <div class="meta">${p.categories.join(", ")} • ${p.city}</div>
+        <div class="price">${p.price}</div>
+      </div>
+    </a>`;
 }
 
 function render(){
@@ -70,18 +85,3 @@ function initUI(){
 }
 
 document.addEventListener("DOMContentLoaded", initUI);
-
-
-
-// Provider details and linking cards to details
-function cardTemplate(p){
-  return `
-  <a class="card" href="provider.html?id=${p.id}">
-    <img src="${p.photo}" alt="${p.name}" loading="lazy"/>
-    <div class="pad">
-      <h3>${p.name}</h3>
-      <div class="meta">${p.categories.join(", ")} • ${p.city}</div>
-      <div class="price">${p.price}</div>
-    </div>
-  </a>`;
-}
